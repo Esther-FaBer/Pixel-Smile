@@ -46,3 +46,19 @@ function createImageData() {
     return new Array(length).fill(false);
 }
 
+function drawDot(x, y) {
+    if (isPointInImage(x, y)) {
+        imageData[y * imageWidth + x] = true;
+    }
+}
+
+function drawHorizontalLine(x, y, width) {
+    for (let i = 0; i < width; i++) {
+        drawDot(x + i, y);
+    }
+}
+function drawVerticalLine(x, y, height) {
+    for (let i = 0; i < height; i++) {
+        drawDot(x, y + i);
+    }
+}
