@@ -1,11 +1,15 @@
+// create image - pixel smile
 const imageWidth = 20;
 const imageHeight = 8;
 const imageData = createImageData();
+
 // draw head
 drawRectangle(0, 0, 20, 8);
+
 // eyes
 drawDot(7, 2);
 drawDot(12, 2);
+
 // smile
 drawDot(4, 4);
 drawHorizontalLine(4, 5, 12);
@@ -34,7 +38,7 @@ function outputImage(onChar = "X", offChar = " ") {
         if (i > 0 && i % imageWidth === 0) {
             text += "\n"; // new line
         }
-        text += imageData[i] ? onChar : offChar.repeat(2);
+        text += imageData[i] ? onChar : offChar;
     }
     console.log(text);
 }
