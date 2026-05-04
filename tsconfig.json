@@ -1,1 +1,8 @@
-tsconfig.json
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "strictNullChecks": true
+  },
+  "include": ["**/*.ts"]
+}
